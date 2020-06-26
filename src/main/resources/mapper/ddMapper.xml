@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ddnas.web.mapper.ddMapper">
+	<resultMap type="dDDTO" id="resultDDDTO">
+		<id property="ddCode" column="DD_CODE"/>
+        <!-- <result property="userCode" column="WORKER_CODE"/>
+        <result property="userName" column="MEMBER_NAME"/>
+         -->
+         <result property="ddSerialNo" column="DD_SERIALNO"/>
+        <result property="ddRegistDate" column="DD_REGISTDATE"/>
+	</resultMap>
+	
+	<select id="selectAll" resultMap="resultDDDTO">	
+		SELECT DD_CODE, DD_SERIALNO,DD_REGISTDATE FROM DD ORDER BY DD_CODE DESC
+	</select>
+	
+	<insert id="insert" parameterType="dDDTO">
+		INSERT INTO DD VALUES(#{ddCode},NULL,#{ddSerialNo},SYSDATE,#{ddNote}, #{ddRegistrant},0)
+	</insert>
+	
+	<select id="getSeq" resultType="int">
+		SELECT DD_SEQ.NEXTVAL FROM DUAL
+	</select>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM DD WHERE DD_CODE=#{value}
+	</delete>
+</mapper>

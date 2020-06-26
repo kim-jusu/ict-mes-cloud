@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_gravity="center">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ID, PW 찾기"
+        android:textStyle="bold"
+        android:textColor="#7D5A47"
+        android:textSize="30dp"/>
+
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  ID 찾기"
+            android:textStyle="bold"
+            android:textColor="#A58D6E"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+
+            <EditText
+                android:id="@+id/find1name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" 이 름 "/>
+
+            <EditText
+                android:id="@+id/find1phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="핸드폰 번호"
+                android:inputType="phone"/>
+
+
+            <Button
+                android:id="@+id/btnfind1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="확인"
+                android:onClick="FindClick"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  비밀번호 찾기"
+            android:textStyle="bold"
+            android:textColor="#A58D6E"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+        <EditText
+            android:id="@+id/find2id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" 아이디(이메일) "/>
+
+        <EditText
+            android:id="@+id/find2name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" 이 름 "/>
+
+
+        <EditText
+            android:id="@+id/find2phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" 핸드폰 번호 "
+            android:inputType="phone"/>
+
+
+        <Button
+            android:id="@+id/btnfind2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" 확인 "
+            android:onClick="FindClick"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인증번호 입력"
+            android:textColor="#7D5A47"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:textSize="30dp"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+        
+        <EditText
+            android:id="@+id/sendnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="_ _ _ _"
+            android:textSize="50dp"
+        android:inputType="number"
+        android:maxLength="4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="#A58D6E"
+            android:text="(DD LCD의 네 자리 숫자를 입력해주세요)"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/research"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:color="#85878a"
+            android:text="기기 다시찾기"/>
+        <Button
+            android:id="@+id/disconnect"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:color="#85878a"
+            android:text="기기 연결끊기"/>
+</LinearLayout>
+        <Button
+            android:id="@+id/sendbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:color="#85878a"
+            android:layout_margin="20dp"
+            android:text="인증번호 보내기"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

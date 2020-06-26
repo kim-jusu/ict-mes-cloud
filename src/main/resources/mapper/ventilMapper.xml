@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ddnas.web.mapper.ventilMapper">
+	<resultMap type="ventilatorDTO" id="resultVentilator">
+		<id property="ventilCode" column="VENTILATOR_CODE"/>
+        <result property="power" column="VENTILATOR_POWER"/>
+        <result property="area" column="VENTILATOR_AREA"/>
+	</resultMap>
+
+	<select id="selectAll" resultMap="resultVentilator">	
+		SELECT * FROM VENTILATOR
+	</select>
+		
+	<update id="powerUp" parameterType="int">
+		UPDATE VENTILATOR SET VENTILATOR_POWER=VENTILATOR_POWER+50 WHERE VENTILATOR_CODE=#{value}
+	</update>	
+	
+	<update id="powerDown" parameterType="int">
+		UPDATE VENTILATOR SET VENTILATOR_POWER=VENTILATOR_POWER-50 WHERE VENTILATOR_CODE=#{value}
+	</update>	
+</mapper>
